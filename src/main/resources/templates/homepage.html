@@ -2,6 +2,7 @@
 <html lang="it">
   <head>
       <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="css/style.css">
       <title>Genshin Italia - Homepage</title>
   </head>
@@ -20,8 +21,15 @@
 
       <main id="app">
           <section id="streamers-container">
-            <h2>Streammers</h2>
-            <div id="streammers"></div>
+            <h2>Streamers</h2>
+            <div class="streammer-container">
+
+                <iframe v-for="streammer in streammers"
+                        :src="'https://player.twitch.tv/?channel=' + streammer.name + '&parent=localhost&muted=true&autoplay=true'"
+                        allowfullscreen="true">
+                </iframe>
+
+            </div>
           </section>
 
           <section id="news-container">
