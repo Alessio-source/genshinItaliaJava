@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="css/style.css">
+      <title>Genshin Italia - Homepage</title>
+  </head>
+  <body>
+      <header>
+          <nav>
+              <a href="/">GenshinItalia</a>
+
+              <ul id="nav-menu">
+                  <li class="nav-link">
+                      <a href="test">Test</a>
+                  </li>
+              </ul>
+          </nav>
+      </header>
+
+      <main id="app">
+          <section id="streamers-container">
+            <h2>Streammers</h2>
+            <div id="streammers"></div>
+          </section>
+
+          <section id="news-container">
+            <h2>Ultime News</h2>
+            <div id="news" v-for="index in 7" :key="index" v-html="news[index].description"></div>
+            <small>Tutte le notizie provengono da google news.</small>
+          </section>
+      </main>
+
+        <footer>
+            <section id="footer-top">
+
+            </section>
+
+            <section id="footer-bottom">
+                <p>&#169; Genshin Italia - <span id="footer-date"></span> </p>
+            </section>
+
+            <script src="/js/external/vue.js"></script>
+            <script src="/js/external/axios.js"></script>
+            <script src="/js/main.js"></script>
+
+            <script>
+                document.getElementById('footer-date').innerHTML = new Date().getFullYear();
+            </script>
+        </footer>
+  </body>
+</html>
