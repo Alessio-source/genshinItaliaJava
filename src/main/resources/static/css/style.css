@@ -22,3 +22,7 @@ header nav #nav-menu {
 header nav #nav-menu .nav-link:not(:first-child, :last-child) {
     margin: 0 5px;
 }
+
+main #news-container .news {
+    border-top: 1px solid #848484;
+}
